@@ -38,5 +38,11 @@ int main()
 	box6->setScale(0.01f);
 	auto box7 = Object::create("RoomEscape_Images/box.png", scene1, 130, 190);
 	box7->setScale(0.01f);
-
+	
+	//문을 만든다.
+	auto open1 = false;
+	auto open2 = false; 
+	auto door1_2 = Object::create("RoomEscape_Images/문-오른쪽-닫힘.png", scene1, 800, 270);
+	auto door2_1 = Object::create("RoomEscape_Images/문-왼쪽-열림.png", scene2, 320, 270);
+	auto door2_2 = Object::create("RoomEscape_Images/문-오른쪽-열림.png", scene2, 910, 272, false);
 }
