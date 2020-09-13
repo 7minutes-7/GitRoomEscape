@@ -105,4 +105,97 @@ int main()
 		endGame();
 		return true;
 		});
+
+	//박스 위아래로 드래그시 움직인다. 
+	box1->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (box1_moved == false) {
+			if (action == MouseAction::MOUSE_DRAG_UP) {
+				box1->locate(scene1, 330, 240);
+				box1_moved = true;
+			}
+		}
+		else if (action == MouseAction::MOUSE_DRAG_DOWN) {
+			box1->locate(scene1, 330, 170);
+			box1_moved = false;
+		}
+		return true;
+		});
+	box2->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (box2_moved == false) {
+			if (action == MouseAction::MOUSE_DRAG_UP) {
+				box2->locate(scene1, 550, 100);
+				box2_moved = true;
+			}
+		}
+		else if (action == MouseAction::MOUSE_DRAG_DOWN) {
+			box2->locate(scene1, 550, 30);
+			box2_moved = false;
+		}
+		return true;
+		});
+	box3->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (box3_moved == false) {
+			if (action == MouseAction::MOUSE_DRAG_UP) {
+				box3->locate(scene1, 1100, 200);
+				box3_moved = true;
+			}
+		}
+		else if (action == MouseAction::MOUSE_DRAG_DOWN) {
+			box3->locate(scene1, 1100, 130);
+			box3_moved = false;
+		}
+		return true;
+		});
+	box4->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (box4_moved == false) {
+			if (action == MouseAction::MOUSE_DRAG_UP) {
+				box4->locate(scene1, 790, 160);
+				box4_moved = true;
+			}
+		}
+		else if (action == MouseAction::MOUSE_DRAG_DOWN) {
+			box4->locate(scene1, 790, 90);
+			box4_moved = false;
+		}
+		return true;
+		});
+	box5->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (box5_moved == false) {
+			if (action == MouseAction::MOUSE_DRAG_UP) {
+				box5->locate(scene1, 600, 260);
+				box5_moved = true;
+			}
+		}
+		else if (action == MouseAction::MOUSE_DRAG_DOWN) {
+			box5->locate(scene1, 600, 190);
+			box5_moved = false;
+		}
+		return true;
+		});
+	box6->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (box6_moved == false) {
+			if (action == MouseAction::MOUSE_DRAG_UP) {
+				box6->locate(scene1, 200, 85);
+				box6_moved = true;
+			}
+		}
+		else if (action == MouseAction::MOUSE_DRAG_DOWN) {
+			box6->locate(scene1, 200, 15);
+			box6_moved = false;
+		}
+		return true;
+		});
+	box7->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (box7_moved == false) {
+			if (action == MouseAction::MOUSE_DRAG_UP) {
+				box7->locate(scene1, 130, 260);
+				box7_moved = true;
+			}
+		}
+		else if (action == MouseAction::MOUSE_DRAG_DOWN) {
+			box7->locate(scene1, 130, 190);
+			box7_moved = false;
+		}
+		return true;
+		});
 }
