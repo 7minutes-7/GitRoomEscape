@@ -65,5 +65,22 @@ int main()
 	auto sound_icon = Object::create("RoomEscape_Images/sound.png", scene2, 837, 475);
 	sound_icon->setScale(0.07f);
 
+	//스위치를 만든다.
+	auto lighted = true;
+	auto button = Object::create("RoomEscape_Images/green_switch.png", scene2, 430, 445);
+	button->setScale(0.05f);
+	button->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (lighted) {			//켜진 상태
+			scene2->setLight(0.2f);
+			password->show();
+			lighted = false;
+		}
+		else {					//꺼진 상태
+			scene2->setLight(1.0f);
+			password->hide();
+			lighted = true;
+		}
+		return true;
+		});
 
 }
