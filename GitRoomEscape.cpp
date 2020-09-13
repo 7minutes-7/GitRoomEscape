@@ -236,5 +236,9 @@ int main()
 		}
 		return true;
 		});
+		
+	//게임을 시작한다.  
+	startGame(scene1);
 
+	return 0;
 }
