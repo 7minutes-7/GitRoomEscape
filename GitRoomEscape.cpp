@@ -59,4 +59,11 @@ int main()
 	auto green_button = Object::create("RoomEscape_Images/green_button.png", scene2, 835, 410); //파
 	green_button->setScale(0.1f);
 
+	//힌트 표시.
+	auto password = Object::create("RoomEscape_Images/hint.png", scene2, 400, 30, false);
+	password->setScale(0.25f);
+	auto sound_icon = Object::create("RoomEscape_Images/sound.png", scene2, 837, 475);
+	sound_icon->setScale(0.07f);
+
+
 }
