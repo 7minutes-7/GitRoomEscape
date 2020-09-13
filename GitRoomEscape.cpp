@@ -45,4 +45,18 @@ int main()
 	auto door1_2 = Object::create("RoomEscape_Images/문-오른쪽-닫힘.png", scene1, 800, 270);
 	auto door2_1 = Object::create("RoomEscape_Images/문-왼쪽-열림.png", scene2, 320, 270);
 	auto door2_2 = Object::create("RoomEscape_Images/문-오른쪽-열림.png", scene2, 910, 272, false);
+	
+	//버튼을 만든다.
+	auto play_right = 0;
+	auto la_sound = createSound("RoomEscape_Images/라.mp3");
+	auto sol_sound = createSound("RoomEscape_Images/솔.mp3");
+	auto fa_sound = createSound("RoomEscape_Images/파.mp3");
+
+	auto red_button = Object::create("RoomEscape_Images/red_button.png", scene2, 820, 445); //라
+	red_button->setScale(0.1f);
+	auto blue_button = Object::create("RoomEscape_Images/blue_button.png", scene2, 860, 440); //솔
+	blue_button->setScale(0.1f);
+	auto green_button = Object::create("RoomEscape_Images/green_button.png", scene2, 835, 410); //파
+	green_button->setScale(0.1f);
+
 }
