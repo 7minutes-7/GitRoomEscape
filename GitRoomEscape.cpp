@@ -198,4 +198,43 @@ int main()
 		}
 		return true;
 		});
+
+	//버튼 클릭하면 소리 발생
+	red_button->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		playSound(la_sound);
+		if (play_right == 0 || play_right == 4 || play_right == 5 || play_right == 6) {
+			play_right++;
+			if (play_right == 7 && open2 == false) {
+				door2_2->show();
+				showMessage("뾰로롱");
+				open2 = true;
+			}
+		}
+		else {
+			play_right = 0;
+		}
+		return true;
+		});
+
+	blue_button->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		playSound(sol_sound);
+		if (play_right == 1 || play_right == 3) {
+			play_right++;
+		}
+		else {
+			play_right = 0;
+		}
+		return true;
+		});
+	green_button->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		playSound(fa_sound);
+		if (play_right == 2) {
+			play_right++;
+		}
+		else {
+			play_right = 0;
+		}
+		return true;
+		});
+
 }
