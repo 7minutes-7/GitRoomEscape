@@ -82,5 +82,27 @@ int main()
 		}
 		return true;
 		});
+	//문을 클릭하면 이동한다.  
+	door1_2->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		if (open1 == true) {		
+			scene2->enter();
+		}
+		else if (key->isHanded()) {					
+			door1_2->setImage("RoomEscape_Images/문-오른쪽-열림.png");
+			open1 = true;
+		}
+		else {
+			showMessage("열쇠가 필요해!!!");
+		}
+		return true;
+		});
 
+	door2_1->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		scene1->enter();
+		return true;
+		});
+	door2_2->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		endGame();
+		return true;
+		});
 }
